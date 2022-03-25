@@ -17,4 +17,4 @@ def printstars(numberofstars):
                 print("*",end="")
         print(i,end="")
         print("\n",end="")
-printstars(9)
+printstars(4)
