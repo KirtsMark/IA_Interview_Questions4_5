@@ -7,15 +7,18 @@ def idchecker():
     for i in idstring:
         if (i == "" or i.isdigit() == False):
             error_message = "citizen_id require"
-            print(success, error_code, error_message)
+            print('''"success" : ''' + str(success))
+            print('''"error_code" : ''' + str(error_code))
+            print('''"error_message" : ''' + str(error_message))
             return 
         idval.append(int(i))
     if (len(idval) != 13):
         error_message = "citizen_id invalid"
-        print(success, error_code, error_message)
+        print('''"success" : ''' + str(success))
+        print('''"error_code" : ''' + str(error_code))
+        print('''"error_message" : ''' + str(error_message))
         return
     idval.pop()
-    print(idval)
     newid = []
     idval.reverse()
     for i in range(len(idval),1,-1):
@@ -28,7 +31,9 @@ def idchecker():
     success = True
     error_code = "200"
     error_message = ""
-    print(success, error_code, error_message)
+    print('''"success" : ''' + str(success))
+    print('''"error_code" : ''' + str(error_code))
+    print('''"error_message" : ''' + str(error_message))
     return success, error_code, error_message 
 
 idchecker()
